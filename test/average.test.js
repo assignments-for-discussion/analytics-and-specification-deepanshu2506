@@ -28,3 +28,9 @@ it('return average if less than 50% NaN and no long sequences of NaN', () => {
   expect(average([1, NaN, NaN, 3, 2, NaN, 1, 1, 1, 1]))
       .to.be.approximately(1.4, 0.03);
 });
+
+
+it('test for NaN values at the end of the input', () => {
+  expect(average([1, NaN, NaN, 3, 2, 1, 1, 1, 1, NaN]))
+      .to.be.approximately(1.4, 0.03);
+});
